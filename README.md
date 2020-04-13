@@ -8,7 +8,7 @@ You can reach his github pages from the link below.
 
 https://github.com/lazyprogrammer/machine_learning_examples
 
-You can reach my notes from "Notes.md" 
+You can reach my notes from [Notes.md](https://github.com/pelinbalci/Bayesian-AB-Test/blob/master/Notes.md) 
 
 I will add other resources to clarify some topics. 
 
