@@ -38,6 +38,8 @@ assumed distribution is gaussian:
   The problem here is that less assumption means less power. You need more extreme difference to get statistically 
   significant p value. 
   
+Reach the codes here: [ctr_t_test.py](https://github.com/pelinbalci/Bayesian-AB-Test/blob/master/ab_test_study/ctr_t_test.py)
+  
   
 #### How t changes with sample size and standart deviation? 
 
@@ -62,11 +64,16 @@ stats.ttest_ind(control, test, equal_var = False)
 
 ### Chi Square Test
 
+Nice example for Chi Square: (https://www.bounteous.com/insights/2014/07/01/only-statistical-significance-test-you-need/)
+
 Chi Square is always positive (this is a one sided test)
         
     p value = 1- cdf(chi square value) 
 
 That means we need a high chi square value to get a small p value. 
+
+Reach the codes here: [chi_square_test.py](https://github.com/pelinbalci/Bayesian-AB-Test/blob/master/ab_test_study/chi_square_test.py)
+
 
 ### More Than Two Groups 
 
