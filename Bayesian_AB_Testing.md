@@ -61,7 +61,75 @@ Check this to see a better code:)
 (https://github.com/lilianweng/multi-armed-bandit/blob/master/solvers.py#L48)
 
 
+### UCB1 Algorithm 
 
+Find upper bounds with Chernoff - Hoeffding Bound:
+
+&epsilon; >0
+
+P(&mu;<sup>*</sup> < &mu; - &epsilon;) <= exp(-2&epsilon;<sup>2</sup>N)
+
+P(|&mu;<sup>*</sup> - &mu;| <= - &epsilon;) > 1-  2exp(-2&epsilon;<sup>2</sup>N)
+
+j<sup>*</sup>  = argmax(&mu; <sub>j</sub> + sqrt(2ln N / N<sub>j</sub>))
+
+- If &mu; <sub>j</sub> is high; exploit j more often. 
+- If N is high but  N<sub>j</sub> is low, then continue to explore. 
+- While N --> infinity lnN / N<sub>j</sub> --> 0. Then we use only &mu; <sub>j</sub>. 
+
+Check this code: 
+(https://github.com/lilianweng/multi-armed-bandit/blob/master/solvers.py#L79)
+
+
+## Conjugate Priors
+
+When we use frequentist approach; we measure parameters like mean or CTR --> point estimates. 
+
+But this doesn't take into account that how certain we were about this estimation. The solution is using CLT Confidence 
+Interval is gaussian and then we get the lower and upper bounds in %95 area. What we are doing is solving a maximum 
+likelihood problem, find paramaters which maximizes the likelihood of the data: 
+
+maximum likelihood = &theta;<sup>*</sup> = argmax<sub>&theta;</sub>P(X|&theta;)
+
+
+Bayesian Statistics treat &theta; as a random variable; it has its own distribution and shape of this distribution tells
+us how confident we are of any value of the parameter.
+
+P(&theta; | X) = P(X | &theta;) * P(&theta;) / P(X)
         
+        P(&theta;) -> prior probability(old beliefs about params)
+        P(X | &theta;) -> likelihood of the data
+        P(&theta; | X) -> posterior probability (new beliefs about params after seeing the data)
  
+CTR example: 
+       
+CTR --> P(X | &theta;) distribution is bernoulli.
+ 
+&theta; is probaility of getting click [0,1] Beta distirbution gives the value between 0 and 1. 
+
+Beta(a, b) = &theta;<sup>a-1</sup> (1- &theta;<sup>b-1</sup>) / B(a,b)
+
+B(a,b) = &Gamma;(a)&Gamma;(b) / &Gamma;(a+b)
+
+&Gamma;(a) = (a-1)!
+
+
+P(&theta; | X) ~ P(X | &theta;) * P(&theta;
+
+P(&theta; | X)  ~ (&Pi; &theta; <sup>Xi</sup> (1- &theta; <sup>1-Xi</sup>)) &theta;<sup>a-1</sup> (1- &theta;<sup>b-1</sup>)
+
+P(&theta; | X) ~&theta;<sup>a-1 + &Sum; Xi</sup> (1- &theta;<sup>b-1 + &Sum; (1-Xi) </sup>)
+
+P(&theta; | X) = Beta (a<sup>'</sup>, b<sup>'</sup> )
+P(&theta; | X) has a Beta distribution which has parameters: 
+
+a<sup>'</sup> = a + &Sum; Xi (a + sum of clicks)
+b<sup>'</sup> = b + &Sum; 1- Xi ( b+ sum of no clicks)
+
+
+How to set a and b? 
+
+If a = 1 and b=1 then beta --> uniform 
+If we don't know anything at first all CTR are equally probable (non informative prior)
+
 
