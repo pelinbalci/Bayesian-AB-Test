@@ -95,13 +95,12 @@ maximum likelihood = &theta;<sup>*</sup> = argmax<sub>&theta;</sub>P(X|&theta;)
 Bayesian Statistics treat &theta; as a random variable; it has its own distribution and shape of this distribution tells
 us how confident we are of any value of the parameter.
 
-P(&theta; | X) = P(X | &theta;) * P(&theta;) / P(X)
-        
-        P(&theta;) -> prior probability(old beliefs about params)
-        P(X | &theta;) -> likelihood of the data
-        P(&theta; | X) -> posterior probability (new beliefs about params after seeing the data)
+P(&theta; | X) = P(X | &theta;) * P(&theta;) / P(X)   
+- P(&theta;) -> prior probability(old beliefs about params)
+- P(X | &theta;) -> likelihood of the data
+- P(&theta; | X) -> posterior probability (new beliefs about params after seeing the data)
  
-CTR example: 
+### CTR example:
        
 CTR --> P(X | &theta;) distribution is bernoulli.
  
@@ -131,5 +130,4 @@ How to set a and b?
 
 If a = 1 and b=1 then beta --> uniform 
 If we don't know anything at first all CTR are equally probable (non informative prior)
-
 
