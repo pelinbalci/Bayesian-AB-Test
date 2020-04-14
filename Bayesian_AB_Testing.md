@@ -131,3 +131,5 @@ How to set a and b?
 If a = 1 and b=1 then beta --> uniform 
 If we don't know anything at first all CTR are equally probable (non informative prior)
 
+
+For more details: https://en.wikipedia.org/wiki/Conjugate_prior
