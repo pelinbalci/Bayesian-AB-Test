@@ -37,7 +37,9 @@ Adaptive methods of solving the Explore & Exploit Dilemma:
         > Epsilon Greedy Algorithm 
         > UCB1 (Upper Confidence Bound) Algorithm 
         
-        
+Read: https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html
+
+
 ### Epsilon Greeedy Algorithm
 
 You will not blindly serve A and B to the equal number of times. For example if performs better, show it more. That means
