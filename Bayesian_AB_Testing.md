@@ -29,7 +29,7 @@ Here comes the dilemma.
         higher CTR. However, while collecting the data you show the suboptimal design to too many customers. 
          
         > Explotation:
-         We want to play only the machine to maximize our winnings. But you don't the best machine unless collecting 
+         We want to play only the machine to maximize our winnings. But you don't know the best machine unless collecting 
         a lot of data.
 
 Adaptive methods of solving the Explore & Exploit Dilemma:
@@ -83,13 +83,13 @@ Check this code:
 
 ## Conjugate Priors
 
-When we use frequentist approach; we measure parameters like mean or CTR --> point estimates. 
+When we use frequentist approach; we measure parameters like mean or CTR --> these are point estimates. 
 
-But this doesn't take into account that how certain we were about this estimation. The solution is using CLT Confidence 
-Interval is gaussian and then we get the lower and upper bounds in %95 area. What we are doing is solving a maximum 
-likelihood problem, find paramaters which maximizes the likelihood of the data: 
+But this doesn't take into account that how certain we were about this estimation. The solution is by using CLT 
+be sure that Confidence Interval is gaussian. Then we get the lower and upper bounds in %95 area. What we are doing is 
+solving a maximum likelihood problem, finding the paramaters which maximizes the likelihood of the data: 
 
-maximum likelihood = &theta;<sup>*</sup> = argmax<sub>&theta;</sub>P(X|&theta;)
+maximum likelihood => &theta;<sup>*</sup> = argmax<sub>&theta;</sub>P(X|&theta;)
 
 
 Bayesian Statistics treat &theta; as a random variable; it has its own distribution and shape of this distribution tells
@@ -103,8 +103,12 @@ P(&theta; | X) = P(X | &theta;) * P(&theta;) / P(X)
 ### CTR example:
        
 CTR --> P(X | &theta;) distribution is bernoulli.
+
+distribution of P(X | &theta;) --> &Pi; &theta; <sup>Xi</sup> (1- &theta; <sup>1-Xi</sup>)
  
-&theta; is probaility of getting click [0,1] Beta distirbution gives the value between 0 and 1. 
+&theta; is probaility of getting click [0,1] Beta distribution gives the value between 0 and 1. 
+
+Below you can find the Beta Distribution and its relation with Gamma function:
 
 Beta(a, b) = &theta;<sup>a-1</sup> (1- &theta;<sup>b-1</sup>) / B(a,b)
 
@@ -112,8 +116,10 @@ B(a,b) = &Gamma;(a)&Gamma;(b) / &Gamma;(a+b)
 
 &Gamma;(a) = (a-1)!
 
+How can we find the distribution of P(&theta; | X) ? We can use the bayesian formula and ignore the denominator (P(X)) 
+partcsince it doesn't depend on &theta;.
 
-P(&theta; | X) ~ P(X | &theta;) * P(&theta;
+P(&theta; | X) ~ P(X | &theta;) * P(&theta;)
 
 P(&theta; | X)  ~ (&Pi; &theta; <sup>Xi</sup> (1- &theta; <sup>1-Xi</sup>)) &theta;<sup>a-1</sup> (1- &theta;<sup>b-1</sup>)
 
@@ -122,8 +128,8 @@ P(&theta; | X) ~&theta;<sup>a-1 + &Sum; Xi</sup> (1- &theta;<sup>b-1 + &Sum; (1-
 P(&theta; | X) = Beta (a<sup>'</sup>, b<sup>'</sup> )
 P(&theta; | X) has a Beta distribution which has parameters: 
 
-a<sup>'</sup> = a + &Sum; Xi (a + sum of clicks)
-b<sup>'</sup> = b + &Sum; 1- Xi ( b+ sum of no clicks)
+- a<sup>'</sup> = a + &Sum; Xi (a + sum of clicks)
+- b<sup>'</sup> = b + &Sum; 1- Xi ( b+ sum of no clicks)
 
 
 How to set a and b? 

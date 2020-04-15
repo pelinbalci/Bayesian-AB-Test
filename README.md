@@ -12,4 +12,4 @@ You can reach my notes from [Bayesian_vs_Frequentist_Approach.md](https://github
 
 I will add other resources to clarify some topics. 
 
-Note: Notes.md page is still under construction. 
+Note: This page is still under construction. 
