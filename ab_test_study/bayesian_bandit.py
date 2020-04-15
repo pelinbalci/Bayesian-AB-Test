@@ -5,6 +5,20 @@ from scipy.stats import beta
 '''
 Ref: https://github.com/lazyprogrammer/machine_learning_examples/blob/master/ab_testing/bayesian_bandit.py
 
+Explanation: 
+
+You have three bandits, each of them has different probabilities (variable: bandit_prob) 
+These probabilities have beta distribution. 
+
+Select a random variable from beta distribution for each bandit and select the maximum one which is best_bandit for now. 
+
+Play for this bandit. 
+
+You can either win or loose. Function random_number_generator will be used for win or loose state. 
+If x =1 (win) then increase the value of a by 1, else, increase the value of b by 1. 
+
+After 2000 trials, you will see from the plot that the best machine has lowest variance and exploited a lot.
+
 '''
 
 num_trials = 2000
