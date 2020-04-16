@@ -32,7 +32,7 @@ class Bandit(object):
         self.a = 1
         self.b = 1
 
-    def random_number_generator(self):
+    def random_output(self):
         return np.random.random() < self.p
 
     def sample_from_beta(self):
