@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
-from ab_test_study.bayesian_bandit import Bandit
+from scripts.bayesian_bandit import Bandit
 
 def run_experiment(p1, p2, p3, N):
 

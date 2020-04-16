@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from scipy.stats import chi2, chi2_contingency
 
-df = pd.read_csv("/Users/pelin.balci/PycharmProjects/Bayesian-AB-Test/ab_test_study/advertisement_clicks.csv", sep = ",")
+df = pd.read_csv("/Users/pelin.balci/PycharmProjects/Bayesian-AB-Test/scripts/advertisement_clicks.csv", sep = ",")
 control = df[df.advertisement_id == 'A']
 test =  df[df.advertisement_id == 'B']
 
