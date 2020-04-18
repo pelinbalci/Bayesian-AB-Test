@@ -172,6 +172,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="settings.editor.selected.configurable" value="Settings.Markdown" />
   </component>
   <component name="RecentsManager">
@@ -191,7 +192,28 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.ctr_t_test">
+  <component name="RunManager" selected="Python.bayesian_bandit">
+    <configuration name="bayesian_bandit" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Bayesian-AB-Test" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/scripts" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/scripts/bayesian_bandit.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="chi_square_test" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="Bayesian-AB-Test" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -276,34 +298,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="thompson_sampling_convergence" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="Bayesian-AB-Test" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ab_test_study" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ab_test_study/thompson_sampling_convergence.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.bayesian_bandit" />
         <item itemvalue="Python.ctr_t_test" />
         <item itemvalue="Python.chi_square_test" />
         <item itemvalue="Python.server_ex" />
         <item itemvalue="Python.ci_comparsion" />
-        <item itemvalue="Python.thompson_sampling_convergence" />
       </list>
     </recent_temporary>
   </component>
