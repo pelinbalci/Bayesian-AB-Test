@@ -74,7 +74,7 @@ def experiment():
             print("current_samples: %s " % all_samples)
             plot_bandit(bandits, i)
 
-        x = best_bandit.random_number_generator()
+        x = best_bandit.random_output()
         best_bandit.update_params(x)
 
 
