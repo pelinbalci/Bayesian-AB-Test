@@ -2,6 +2,10 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scripts.bayesian_bandit import Bandit
 
+'''
+Ref: https://github.com/lazyprogrammer/machine_learning_examples/blob/master/ab_testing/convergence.py
+'''
+
 def run_experiment(p1, p2, p3, N):
 
     bandits = Bandit(p1), Bandit(p2), Bandit(p3)

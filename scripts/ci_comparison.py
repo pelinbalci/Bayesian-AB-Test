@@ -2,6 +2,9 @@ import matplotlib.pyplot as plt
 import numpy as np
 from scipy.stats import beta, norm
 
+'''
+Ref: https://github.com/lazyprogrammer/machine_learning_examples/blob/master/ab_testing/ci_comparison.py
+'''
 
 T = 501
 true_ctr = 0.5
