@@ -1,9 +1,7 @@
-# My notes: 'Bayesian Machine Learning in Python: A/B Testing'
-
+# Notes for 'Bayesian Machine Learning in Python: A/B Testing'
 
 I've taken some notes from the course named "Bayesian Machine Learning in Python: A/B Testing " provided by Udemy.
  
-
 I would like to thank LazyProgrammer for his detailed and clear explanations. 
 His github page: https://github.com/lazyprogrammer/machine_learning_examples
 
