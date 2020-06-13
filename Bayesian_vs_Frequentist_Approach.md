@@ -43,7 +43,7 @@ Bayesian Statistics:
 Another explanation: 
 (https://math.stackexchange.com/questions/2126662/what-do-the-two-things-such-that-data-is-fixed-and-parameters-vary-in-bayesi)
 
-"Under a frequentist point of view you might have an unknown parameter, say 𝜃, that you want to estimate based on some 
+"Under a frequentist point of view you might have an unknown parameter, say &theta; , that you want to estimate based on some 
 data you have collected. You assume that this true and unknown parameter is fixed. Your data are expressed through 
 a random variable, say 𝑋. So, for example you are interested in maximizing a likelihood based on the probability 
 density function 𝑓(𝑋∣𝜃). This means that you model your collected data under a belief that the probability function 
@@ -53,7 +53,7 @@ you study).
 
 Under a bayesian point of view things are a bit reversed. You do not view the parameter 𝜃 as an unknown constant, i.e. 
 fixed at some value, that you try to estimate. You rather consider that the parameter itself has a marginal distribution
-𝑓(𝜃) which is called a prior. This expresses you prior beliefs regarding the parameter which now is viewed as a random 
+𝑓(&theta;) which is called a prior. This expresses you prior beliefs regarding the parameter which now is viewed as a random 
 variable since it follows a distribution. Under such a framework you might be interested in modelling 𝑓(𝜃∣𝑋), 
 namely update your knowledge for 𝜃 GIVEN the data you have collected. Since now the data are given, they are not 
 random hence the "data is fixed" that your lecturer mentioned."
